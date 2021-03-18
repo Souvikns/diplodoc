@@ -20,5 +20,9 @@
   "homepage": "https://github.com/Souvikns/diplodocx#readme",
   "devDependencies": {
     "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^7.1.0"
   }
 }
