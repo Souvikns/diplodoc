@@ -1,0 +1,24 @@
+{
+  "name": "diplodocx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Souvikns/diplodocx.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Souvikns/diplodocx/issues"
+  },
+  "homepage": "https://github.com/Souvikns/diplodocx#readme",
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  }
+}
