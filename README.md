@@ -1,8 +1,12 @@
 <h1 align="center">
 Diplodocx
+<br> <br>
+<p>
+<img src="./static/diplodocus.svg" width="100" >
+</p>
 </h1>
 <p align="center">
-<img src="./static/diplodocus.svg" width="100" >
+
 </p>
 
 > Currently in production. 
