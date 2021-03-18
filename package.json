@@ -1,28 +1,35 @@
 {
-  "name": "diplodocx",
+  "name": "diplodoc",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "description": "<h1 align=\"center\"> Diplodoc <br> <br> <p> <img src=\"./static/diplodocus.svg\" width=\"100\" > </p> </h1> <p align=\"center\">",
+  "main": "node bin/diplodoc.js",
+  "bin": {
+    "diplodocx": "diplodoc.js"
+  },
+  "dependencies": {
+    "color-name": "^1.1.4",
+    "commander": "^7.1.0",
+    "color-convert": "^2.0.1",
+    "has-flag": "^4.0.0",
+    "typescript": "^4.2.3",
+    "ansi-styles": "^4.3.0",
+    "chalk": "^4.1.0",
+    "supports-color": "^7.2.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bin/diplodoc.js"
+    "dev": "node bin/diplodoc.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Souvikns/diplodocx.git"
+    "url": "git+https://github.com/Souvikns/diplodoc.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Souvikns/diplodocx/issues"
+    "url": "https://github.com/Souvikns/diplodoc/issues"
   },
-  "homepage": "https://github.com/Souvikns/diplodocx#readme",
-  "devDependencies": {
-    "typescript": "^4.2.3"
-  },
-  "dependencies": {
-    "chalk": "^4.1.0",
-    "commander": "^7.1.0"
-  }
+  "homepage": "https://github.com/Souvikns/diplodoc#readme"
 }
