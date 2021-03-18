@@ -1,5 +1,5 @@
 <h1 align="center">
-Diplodocx
+Diplodoc
 <br> <br>
 <p>
 <img src="./static/diplodocus.svg" width="100" >
