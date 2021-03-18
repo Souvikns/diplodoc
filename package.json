@@ -1,7 +1,7 @@
 {
   "name": "diplodoc",
   "version": "1.0.0",
-  "description": "<h1 align=\"center\"> Diplodoc <br> <br> <p> <img src=\"./static/diplodocus.svg\" width=\"100\" > </p> </h1> <p align=\"center\">",
+  "description": "CLI tool to create beautiful easy to use static documentation or blog sites.",
   "main": "node bin/diplodoc.js",
   "bin": {
     "diplodocx": "diplodoc.js"
