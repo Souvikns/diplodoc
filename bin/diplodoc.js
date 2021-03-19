@@ -2,13 +2,15 @@
 
 const { Command } = require('commander');
 const chalk = require('chalk');
+const {generateProject} = require('../src/create');
 
 const program = new Command();
 
 program
     .command("create <name>")
     .action((name) => {
-        console.log(`cd ${chalk.bgRed(name)}`);
+        generateProject({projectName: name});
+        console.log(chalk.redBright(`cd ${name}`));
     })
 
 program
