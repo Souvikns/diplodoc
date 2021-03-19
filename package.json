@@ -4,7 +4,7 @@
   "description": "CLI tool to create beautiful easy to use static documentation or blog sites.",
   "main": "node bin/diplodoc.js",
   "bin": {
-    "diplodocx": "diplodoc.js"
+    "diplodoc": "diplodoc.js"
   },
   "dependencies": {
     "color-name": "^1.1.4",
