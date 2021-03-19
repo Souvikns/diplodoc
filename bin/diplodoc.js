@@ -11,5 +11,10 @@ program
         console.log(`cd ${chalk.bgRed(name)}`);
     })
 
+program
+    .command("build")
+    .action(() => {
+
+    })
 
 program.parse(process.argv);
