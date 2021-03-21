@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Souvikns/diplodoc#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "commander": "^7.1.0"
+    "commander": "^7.1.0",
+    "marked": "^2.0.1"
   }
 }
