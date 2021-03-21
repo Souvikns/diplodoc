@@ -21,7 +21,7 @@ program
 program
     .command("build")
     .action(() => {
-        console.log(read.reader);
+        console.log(read.reader());
     })
 
 program.command("dev")
