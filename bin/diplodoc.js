@@ -2,7 +2,7 @@
 
 const { Command } = require('commander');
 const chalk = require('chalk');
-const {generateProject} = require('../src/create');
+const {generateProject} = require('../lib/create');
 
 const program = new Command();
 
