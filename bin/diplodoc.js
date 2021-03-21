@@ -21,7 +21,7 @@ program
 program
     .command("build")
     .action(() => {
-        console.log(read.reader({defaultsrcPath: 'src', defaultStaticPath: 'static'}));
+        console.log(read.reader({defaultsrcPath: 'pages', defaultStaticPath: 'static'}));
     })
 
 program.command("dev")
