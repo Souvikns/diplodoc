@@ -3,7 +3,7 @@
 const { Command } = require('commander');
 const chalk = require('chalk');
 const package = require('../package.json');
-const { read } = require('../lib')
+const { reader } = require('../lib/read');
 
 const program = new Command();
 program
@@ -21,7 +21,7 @@ program
 program
     .command("build")
     .action(() => {
-        console.log(read.reader({defaultsrcPath: 'pages', defaultStaticPath: 'static'}));
+        console.log(reader());
     })
 
 program.command("dev")
