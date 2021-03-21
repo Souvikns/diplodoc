@@ -3,6 +3,7 @@
 const { Command } = require('commander');
 const chalk = require('chalk');
 const package = require('../package.json');
+const { read } = require('../lib')
 
 const program = new Command();
 program
@@ -20,16 +21,16 @@ program
 program
     .command("build")
     .action(() => {
-
+        console.log(read.reader);
     })
 
 program.command("dev")
     .action(() => {
-        
+
     })
 
 program.on('command:*', (command) => {
-    console.error(chalk.redBright(`error: invalid command ${command}` ));
+    console.error(chalk.redBright(`error: invalid command ${command}`));
     program.help();
 })
 
