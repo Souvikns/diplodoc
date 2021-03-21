@@ -23,6 +23,11 @@ program
 
     })
 
+program.command("dev")
+    .action(() => {
+        
+    })
+
 program.on('command:*', (command) => {
     console.error(chalk.redBright(`error: invalid command ${command}` ));
     program.help();
