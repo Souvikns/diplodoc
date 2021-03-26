@@ -4,6 +4,7 @@ const { Command } = require('commander');
 const chalk = require('chalk');
 const package = require('../package.json');
 const { reader } = require('../lib/read');
+const {DiplodocApp} = require('../lib/create')
 
 const program = new Command();
 program
@@ -16,6 +17,7 @@ program
     .description("Create project")
     .action((name) => {
         console.log(chalk.blueBright(`created folder ${name}`));
+        let app = new DiplodocApp(process.cwd());
     })
 
 program
