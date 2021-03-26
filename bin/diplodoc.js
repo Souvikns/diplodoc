@@ -17,7 +17,7 @@ program
     .description("Create project")
     .action((name) => {
         console.log(chalk.blueBright(`created folder ${name}`));
-        let app = new DiplodocApp(process.cwd());
+        let app = new DiplodocApp(process.cwd(), name);
     })
 
 program
