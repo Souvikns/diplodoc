@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 
-exports.getCreateQuestions = () => {
+exports.getCreateQuestions = (name) => {
     inquirer.prompt([
         {
             name: 'license',
@@ -15,6 +15,7 @@ exports.getCreateQuestions = () => {
             ]
         }
     ]).then(answers => {
+        answers.name = name;
         return answers;
     })
 }

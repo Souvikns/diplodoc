@@ -18,8 +18,7 @@ program
     .description("Create project")
     .action((name) => {
         console.log(chalk.blueBright(`created folder ${name}`));
-        let inputOptions = util.getCreateQuestions();
-        inputOptions.name = name;
+        let inputOptions = util.getCreateQuestions(name);
         let app = new DiplodocApp(process.cwd(), inputOptions);
     })
 
