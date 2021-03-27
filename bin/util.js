@@ -13,6 +13,15 @@ exports.getCreateQuestions = (name) => {
                 "mit",
                 "isc"
             ]
+        },
+        {
+            name: 'pkgManager',
+            message: "Choose a Package Manager",
+            type: "list",
+            choices: [
+                "npm",
+                "yarn"
+            ]
         }
     ]).then(answers => {
         answers.name = name;
