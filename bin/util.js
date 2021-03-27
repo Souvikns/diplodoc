@@ -3,11 +3,6 @@ const inquirer = require('inquirer');
 exports.getCreateQuestions = () => {
     inquirer.prompt([
         {
-            name: "name",
-            message: "Enter the name of the project",
-            type: "input"
-        },
-        {
             name: 'license',
             message: "Choose a license",
             type: "list",
