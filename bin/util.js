@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 
-exports.getCreateQuestions = (name) => {
+exports.getCreateQuestions = () => {
     return inquirer.prompt([
         {
             name: 'license',
