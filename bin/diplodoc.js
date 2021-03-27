@@ -6,6 +6,7 @@ const package = require('../package.json');
 const { reader } = require('../lib/read');
 const {DiplodocApp} = require('../lib/create')
 const util = require('./util');
+const inquirer = require('inquirer');
 
 const program = new Command();
 program
@@ -18,8 +19,31 @@ program
     .description("Create project")
     .action((name) => {
         console.log(chalk.blueBright(`created folder ${name}`));
-        let inputOptions = util.getCreateQuestions(name);
-        let app = new DiplodocApp(process.cwd(), inputOptions);
+        inquirer.prompt([
+            {
+                name: 'license',
+                message: "Choose a license",
+                type: "list",
+                choices: [
+                    "afl-3.0",
+                    "apache-2.0",
+                    "gpl",
+                    "mit",
+                    "isc"
+                ]
+            },
+            {
+                name: 'pkgManager',
+                message: "Choose a package manager",
+                type: "list",
+                choices: [
+                    "npm",
+                    "yarn"
+                ]
+            }
+        ]).then(answers => {
+            let app = new DiplodocApp(process.cwd(), answers);
+        })
     })
 
 program
