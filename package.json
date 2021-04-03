@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Souvikns/diplodoc#readme",
   "dependencies": {
     "chalk": "^4.1.0",
+    "chokidar": "^3.5.1",
     "commander": "^7.1.0",
     "inquirer": "^8.0.0",
     "js-yaml": "^4.0.0",
