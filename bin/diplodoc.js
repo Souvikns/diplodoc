@@ -3,8 +3,6 @@
 const { Command } = require('commander');
 const chalk = require('chalk');
 const package = require('../package.json');
-const { reader } = require('../lib/read');
-const { DiplodocApp } = require('../lib/create')
 const util = require('./util');
 
 const program = new Command();
@@ -16,17 +14,15 @@ program
 program
     .command("create <name>")
     .description("Create project")
-    .action((name) => {
-        console.log(chalk.blueBright(`created folder ${name}`));
-        util.getCreateQuestions().then(answers => {
-            let app = new DiplodocApp(process.cwd(), answers);
-        })
+    .option('-t, --template <templateName>', "add template configuration")
+    .action((name, options) => {
+        console.log(name, options);
     })
 
 program
     .command("build")
     .action(() => {
-        console.log(reader());
+        
     })
 
 program.command("dev")
