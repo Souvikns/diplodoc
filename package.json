@@ -7,7 +7,7 @@
     "diplodoc": "./bin/diplodoc.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "node bin/diplodoc.js"
   },
   "repository": {
