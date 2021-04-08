@@ -4,6 +4,7 @@ const { Command } = require('commander');
 const chalk = require('chalk');
 const package = require('../package.json');
 const util = require('./util');
+const { build, createApp, dev } = require('../lib/commands')
 
 const program = new Command();
 program
@@ -22,7 +23,7 @@ program
 program
     .command("build")
     .action(() => {
-        
+
     })
 
 program.command("dev")
