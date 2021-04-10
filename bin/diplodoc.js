@@ -16,11 +16,11 @@ program
     .version(package.version);
 
 program
-    .command("create <name>")
+    .command("create")
     .description("Create project")
     .option('-t, --template <templateName>', "add template configuration")
-    .action((name, options) => {
-        console.log(name, options);
+    .action((options) => {
+        console.log(options);
     })
 
 program
