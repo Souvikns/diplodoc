@@ -25,11 +25,15 @@ program
 
 program
     .command("build")
+    .option('-c, --config <configPath>', "relative path of the config file")
+    .description("create build")
     .action(() => {
 
     })
 
 program.command("dev")
+    .description("run development server")
+    .option('-c, --config <configPath>', "relative path of the config file")
     .action(() => {
 
     })
