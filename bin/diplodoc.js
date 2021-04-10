@@ -3,11 +3,12 @@
 /**
  * diplodoc <action/verb> <resource>
  */
-const { Command } = require('commander');
+const { Command, option } = require('commander');
 const chalk = require('chalk');
 const package = require('../package.json');
 const util = require('./util');
-const { build, createApp, dev } = require('../lib/commands')
+const { build, createApp, dev } = require('../lib/commands');
+const inquirer = require('inquirer');
 
 const program = new Command();
 program
@@ -19,8 +20,23 @@ program
     .command("create")
     .description("Create project")
     .option('-t, --template <templateName>', "add template configuration")
-    .action((options) => {
-        console.log(options);
+    .action(async (options) => {
+        if(options === {}){
+            
+        }
+
+        try {
+            let input = await inquirer.prompt([
+                {
+                    name: "name",
+                    message: "Name of the project?"
+                }
+            ])
+
+            console.log(input);
+        } catch (error) {
+            console.log(error);
+        }
     })
 
 program
