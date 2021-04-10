@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+/**
+ * diplodoc <action/verb> <resource>
+ */
 const { Command } = require('commander');
 const chalk = require('chalk');
 const package = require('../package.json');
