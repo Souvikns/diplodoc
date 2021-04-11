@@ -21,11 +21,9 @@ program
     .description("Create project")
     .option('-t, --template <templateName>', "add template configuration")
     .action(async (options) => {
-        if(options === {}){
-            
-        }
 
         try {
+            let config = util.LoadConfigFile(process.cwd(), options.template);
             let input = await inquirer.prompt([
                 {
                     name: "name",
