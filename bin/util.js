@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
+const _ = require('lodash')
 module.exports = {
     getCreateQuestions: () => {
         return inquirer.prompt([
@@ -27,23 +28,28 @@ module.exports = {
             }
         ]);
     },
-
-    LoadConfigFile: async (appDir, fileName) => {
+    /**
+     * 
+     * @param {string} appDir - path of the working directory
+     * @param {string} fileName - name of the config file 
+     * @returns {object} config object
+     */
+    LoadConfigFile: (appDir, fileName) => {
         let filePath;
         try {
-            if (typeof fileName === "undefined")
-                filePath = path.resolve(appDir, 'diplodoc.config.js');
-            else
-                filePath = path.resolve(appDir, fileName);
-
-            let module = await require(filePath);
-            if (typeof module === "object") {
-                return module;
+            if (_.isUndefined(fileName)) {
+                filePath = path.resolve(appDir, "diplodoc.config.js");
             } else {
-                throw new Error("Something wrong with the config file");
+                filePath = path.resolve(appDir, fileName);
             }
+
+            let config = require(filePath);
+
+            if (!_.isObject(config)) throw new Error("Something wrong with the config File");
+
+            return config;
         } catch (error) {
-            throw new Error("File not found");
+            throw error;
         }
     }
 }
