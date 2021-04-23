@@ -1,22 +1,22 @@
-const inquirer = require('inquirer');
-const fs = require('fs');
-const path = require('path');
-const _ = require('lodash')
+const inquirer = require("inquirer");
+const fs = require("fs");
+const path = require("path");
+const _ = require("lodash");
 module.exports = {
-  getCreateQuestions : () => {
+  getCreateQuestions: () => {
     return inquirer.prompt([
       {
-        name : 'license',
-        message : "Choose a license",
-        type : "list",
-        choices : [ "afl-3.0", "apache-2.0", "gpl", "mit", "isc" ]
+        name: "license",
+        message: "Choose a license",
+        type: "list",
+        choices: ["afl-3.0", "apache-2.0", "gpl", "mit", "isc"],
       },
       {
-        name : 'pkgManager',
-        message : "Choose a Package Manager",
-        type : "list",
-        choices : [ "npm", "yarn" ]
-      }
+        name: "pkgManager",
+        message: "Choose a Package Manager",
+        type: "list",
+        choices: ["npm", "yarn"],
+      },
     ]);
   },
   /**
@@ -25,7 +25,7 @@ module.exports = {
    * @param {string} fileName - name of the config file
    * @returns {object} config object
    */
-  LoadConfigFile : (appDir, fileName) => {
+  LoadConfigFile: (appDir, fileName) => {
     let filePath;
 
     if (_.isUndefined(fileName)) {
@@ -40,5 +40,5 @@ module.exports = {
       throw new Error("Something wrong with the config File");
 
     return config;
-  }
-}
+  },
+};
