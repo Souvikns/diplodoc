@@ -1,5 +1,4 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
 const path = require('path');
 const _ = require('lodash')
 module.exports = {
@@ -35,13 +34,7 @@ module.exports = {
      * @returns {object} config object
      */
     LoadConfigFile: (appDir, fileName) => {
-        let filePath;
-
-        if (_.isUndefined(fileName)) {
-            filePath = path.resolve(appDir, "diplodoc.config.js");
-        } else {
-            filePath = path.resolve(appDir, fileName);
-        }
+        let filePath = _.isUndefined(fileName) ? path.resolve(appDir, "diplodoc.config.js"): path.resolve(appDir, fileName);
 
         let config = require(filePath);
 
