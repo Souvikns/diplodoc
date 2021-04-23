@@ -31,6 +31,7 @@ program
             ])
 
             console.log(input);
+            console.log(config);
         } catch (error) {
             console.log(error);
         }
