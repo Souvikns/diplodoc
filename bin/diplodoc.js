@@ -3,58 +3,36 @@
 /**
  * diplodoc <action/verb> <resource>
  */
-const { Command } = require('commander');
-const chalk = require('chalk');
-const package = require('../package.json');
-const util = require('./util');
-const inquirer = require('inquirer');
+const { Command } = require("commander");
+const chalk = require("chalk");
+const package = require("../package.json");
 
 const program = new Command();
-program
-    .name("diplodoc")
-    .addHelpCommand(false)
-    .version(package.version);
+program.name("diplodoc").addHelpCommand(false).version(package.version);
 
 program
-    .command("create")
-    .description("Create project")
-    .option('-t, --template <templateName>', "add template configuration")
-    .action(async (options) => {
-
-        try {
-            let config = util.LoadConfigFile(process.cwd(), options.template);
-            let input = await inquirer.prompt([
-                {
-                    name: "name",
-                    message: "Name of the project?"
-                }
-            ])
-
-            console.log(input);
-            console.log(config);
-        } catch (error) {
-            console.log(error);
-        }
-    })
+  .command("create")
+  .description("Create project")
+  .option("-t, --template <templateName>", "add template configuration")
+  .action(async (options) => {
+    console.log(options);
+  });
 
 program
-    .command("build")
-    .option('-c, --config <configPath>', "relative path of the config file")
-    .description("create build")
-    .action(() => {
+  .command("build")
+  .option("-c, --config <configPath>", "relative path of the config file")
+  .description("create build")
+  .action(() => {});
 
-    })
+program
+  .command("dev")
+  .description("run development server")
+  .option("-c, --config <configPath>", "relative path of the config file")
+  .action(() => {});
 
-program.command("dev")
-    .description("run development server")
-    .option('-c, --config <configPath>', "relative path of the config file")
-    .action(() => {
-
-    })
-
-program.on('command:*', (command) => {
-    console.error(chalk.redBright(`error: invalid command ${command}`));
-    program.help();
-})
+program.on("command:*", (command) => {
+  console.error(chalk.redBright(`error: invalid command ${command}`));
+  program.help();
+});
 
 program.parse(process.argv);
