@@ -36,20 +36,18 @@ module.exports = {
      */
     LoadConfigFile: (appDir, fileName) => {
         let filePath;
-        try {
-            if (_.isUndefined(fileName)) {
-                filePath = path.resolve(appDir, "diplodoc.config.js");
-            } else {
-                filePath = path.resolve(appDir, fileName);
-            }
 
-            let config = require(filePath);
-
-            if (!_.isObject(config)) throw new Error("Something wrong with the config File");
-
-            return config;
-        } catch (error) {
-            throw error;
+        if (_.isUndefined(fileName)) {
+            filePath = path.resolve(appDir, "diplodoc.config.js");
+        } else {
+            filePath = path.resolve(appDir, fileName);
         }
+
+        let config = require(filePath);
+
+        if (!_.isObject(config)) throw new Error("Something wrong with the config File");
+
+        return config;
+
     }
 }
