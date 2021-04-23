@@ -6,7 +6,6 @@
 const { Command } = require('commander');
 const chalk = require('chalk');
 const package = require('../package.json');
-const inquirer = require('inquirer');
 
 const program = new Command();
 program
