@@ -3,11 +3,10 @@
 /**
  * diplodoc <action/verb> <resource>
  */
-const { Command, option } = require('commander');
+const { Command } = require('commander');
 const chalk = require('chalk');
 const package = require('../package.json');
 const util = require('./util');
-const { build, createApp, dev } = require('../lib/commands');
 const inquirer = require('inquirer');
 
 const program = new Command();
