@@ -20,9 +20,8 @@ Diplodoc
 
 </p>
 
-> Currently in production. 
-
+> Currently in production.
 
 ## Introduction
-Tool to create beautiful easy to use static documentation or blog sites. 
 
+Tool to create beautiful easy to use static documentation or blog sites.
