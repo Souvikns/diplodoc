@@ -17,7 +17,7 @@ Diplodoc
 <a href="https://codecov.io/gh/Souvikns/diplodoc">
   <img src="https://codecov.io/gh/Souvikns/diplodoc/branch/main/graph/badge.svg?token=P7QSEXABD3"/>
 </a>
-
+<a href="https://deepscan.io/dashboard#view=project&tid=8580&pid=16855&bid=369153"><img src="https://deepscan.io/api/teams/8580/projects/16855/branches/369153/badge/grade.svg" alt="DeepScan grade"></a>
 </p>
 
 > Currently in production.
