@@ -17,7 +17,7 @@ Diplodoc
 <a href="https://codecov.io/gh/Souvikns/diplodoc">
   <img src="https://codecov.io/gh/Souvikns/diplodoc/branch/main/graph/badge.svg?token=P7QSEXABD3"/>
 </a>
-<a href="https://deepsource.io/gh/Souvikns/diplodoc/?ref=repository-badge" target="_blank"><img alt="DeepSource" title="DeepSource" src="https://deepsource.io/gh/Souvikns/diplodoc.svg/?label=active+issues&show_trend=true"/></a>
+
 </p>
 
 > Currently in production. 
